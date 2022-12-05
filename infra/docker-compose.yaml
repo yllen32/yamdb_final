@@ -9,7 +9,7 @@ services:
     - ./.env
   
   api:
-    build: ../api_yamdb/
+    image: yllen32/api_yambd:v2
     restart: always
     volumes:
       - static_value:/infra/static/
