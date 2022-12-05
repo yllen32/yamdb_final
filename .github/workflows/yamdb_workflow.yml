@@ -20,5 +20,4 @@ jobs:
       working-directory: ./api_yamdb
     - name: test starting
       run: |
-        cd api_yamdb
         python -m flake8
