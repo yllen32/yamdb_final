@@ -67,8 +67,7 @@ class ReviewSerializer(serializers.ModelSerializer):
                 and self.context['request'].method != 'PATCH'):
             raise serializers.ValidationError(
                 'You cannot review one title twice')
-        else:
-            return value
+        return value
 
 
 class AuthSerializer(serializers.ModelSerializer):
