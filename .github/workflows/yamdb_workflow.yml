@@ -38,5 +38,5 @@ jobs:
     - name:
       uses: docker/build-push-action@v3
       with:
-          push: true
-          tags: yllen32/api_yambd:latest
+        push: true
+        tags: yllen32/api_yambd:latest
