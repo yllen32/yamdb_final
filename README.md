@@ -1,3 +1,5 @@
+![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?event=push)
+
 # About
 The YaMDb project collects user reviews on works (Titles). The works are divided into categories: "Books", "Films", "Music". The list of categories can be expanded by the administrator (for example, you can add the category "Fine Art" or "Jewelry").
 The works themselves are not stored in YaMDb, you cannot watch a movie or listen to music here.
