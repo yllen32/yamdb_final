@@ -45,7 +45,7 @@ jobs:
         tags: yllen32/api_yambd:latest
   
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     needs: prepare_Dockerfile
     steps:
       - name: connect to server
@@ -58,3 +58,14 @@ jobs:
           script: |
             cd infra/
             sudo docker-compose up -d
+  
+  send_message:
+    runs-on: ubuntu-22.04
+    needs: deploy
+    steps:
+    - name: send message
+      uses: appleboy/telegram-action@master
+      with:
+        to: ${{ secrets.ADMIN_ID }}
+        token: ${{ secrets.BOT_TOKEN }}
+        message: ${{ github.workflow }} успешно выполнен! 
