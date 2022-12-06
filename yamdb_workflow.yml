@@ -18,9 +18,10 @@ jobs:
         pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort
         pip install -r requirements.txt
       working-directory: ./api_yamdb
-    - name: test starting
-      run: |
-        python -m flake8
+    - name: pep8 check
+      run: python -m flake8
+    - name: pytest
+      run: pytest
 
   prepare_Dockerfile:
     runs-on: ubuntu-22.04
