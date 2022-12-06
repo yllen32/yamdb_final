@@ -5,7 +5,7 @@ from .models import User, Categorie, Genre, Title, Comment, Review
 
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-    list_display = ('username', 'role', 'email')
+    list_display = ('username', 'role', 'email',)
     list_editable = ('role', 'email')
     exclude = ('groups', 'user_permissions', 'is_staff')
     search_fields = ('username', 'email')
