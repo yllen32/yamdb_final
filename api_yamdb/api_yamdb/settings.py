@@ -8,7 +8,6 @@ load_dotenv()
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 #  make sure you have own secret key in the .env file
 SECRET_KEY = str(os.getenv('SECRET_KEY', 'default_secret=)'))
 
