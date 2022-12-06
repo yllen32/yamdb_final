@@ -33,8 +33,8 @@ jobs:
     - name: login to Docker Hub
       uses: docker/login-action@v2
       with:
-        login: {{ secrets.DOCKER_LOGIN }}
-        password: {{ secrets.DOCKER_PASSWORD }}
+        username: ${{ secrets.DOCKER_LOGIN }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
     - name:
       uses: docker/build-push-action@v3
       with:
