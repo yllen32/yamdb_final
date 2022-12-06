@@ -55,6 +55,6 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-          sudo docker pull yllen32/api_yambd:latest
-          sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 yllen32/api_yambd:latest 
+            sudo docker pull yllen32/api_yambd:latest
+            sudo docker stop $(sudo docker ps -a -q)
+            sudo docker run --rm -d -p 5000:5000 yllen32/api_yambd:latest 
