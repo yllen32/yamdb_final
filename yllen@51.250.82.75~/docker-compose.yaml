@@ -1,0 +1,34 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15.0-alpine
+    restart: always
+    volumes:
+    - db_data:/var/lib/postgresql/data/
+    env_file:
+    - ./.env
+  
+  api:
+    image: yllen32/api_yambd:v2
+    restart: always
+    volumes:
+      - static_value:/infra/static/
+    depends_on:
+      - db
+    env_file:
+    - ./.env
+  
+  nginx:
+    image: nginx:1.23.2-alpine
+    ports:
+      - "80:80"
+    restart: always
+    volumes:
+    - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    - static_value:/var/html/static/
+    depends_on:
+      - api
+
+volumes:
+  static_value:
+  db_data:
