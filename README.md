@@ -1,8 +1,8 @@
 ![example workflow](https://github.com/yllen32/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?event=push)
 
-Check below link to see the projecte already deployed on server
+Check below link to see the project already deployed on server
 
-http://51.250.82.75/admin/
+http://51.250.82.75/redoc/
 
 # About
 The YaMDb project collects user reviews on works (Titles). The works are divided into categories: "Books", "Films", "Music". The list of categories can be expanded by the administrator (for example, you can add the category "Fine Art" or "Jewelry").
