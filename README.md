@@ -1,6 +1,7 @@
 ![example workflow](https://github.com/yllen32/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?event=push)
 
 Check below link to see the projecte already deployed on server
+
 http://51.250.82.75/admin/
 
 # About
